@@ -1,17 +1,54 @@
-
-  
-
 <!DOCTYPE html>
-<html>
-  
-  <head>
-  <script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0"></script>
+<html lang="en">
+<head>
+  <title>Making music with magenta.js</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- These imports are needed for the CodeMirror snippets to work -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/codemirror.min.js"></script>
+  <link rel="stylesheet" href="https://js.tensorflow.org/css/vendor/codemirror.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/theme/dracula.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/mode/xml/xml.min.js"></script>
+
+  <!-- This imports magenta.js on the page -->
+  <script src="https://cdn.jsdelivr.net/npm/@magenta/music@1.18.1"></script>
+
+  <link rel="stylesheet" href="/styles.css">
 </head>
   
 <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+<h1>Playing Area</h1>
+<p>Sample.</p>
+  
+      <div class="controls">
+      <button onclick="startOrStop(event, player)">Play</button>
+      <div>Editable</div>
+    </div>
+    <textarea class="sample" editable mode="javascript">
+TWINKLE_TWINKLE = {
+  notes: [
+    {pitch: 60, startTime: 0.0, endTime: 0.5},
+    {pitch: 60, startTime: 0.5, endTime: 1.0},
+    {pitch: 67, startTime: 1.0, endTime: 1.5},
+    {pitch: 67, startTime: 1.5, endTime: 2.0},
+    {pitch: 69, startTime: 2.0, endTime: 2.5},
+    {pitch: 69, startTime: 2.5, endTime: 3.0},
+    {pitch: 67, startTime: 3.0, endTime: 4.0},
+    {pitch: 65, startTime: 4.0, endTime: 4.5},
+    {pitch: 65, startTime: 4.5, endTime: 5.0},
+    {pitch: 64, startTime: 5.0, endTime: 5.5},
+    {pitch: 64, startTime: 5.5, endTime: 6.0},
+    {pitch: 62, startTime: 6.0, endTime: 6.5},
+    {pitch: 62, startTime: 6.5, endTime: 7.0},
+    {pitch: 60, startTime: 7.0, endTime: 8.0},  
+  ],
+  totalTime: 8
+};
+    </textarea>
 
 </body>
 </html>
